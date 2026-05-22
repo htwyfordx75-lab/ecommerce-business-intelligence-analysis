@@ -297,6 +297,44 @@ plt.savefig("screenshots/orders_per_month.png")
 plt.show()
 
 # ============================================
+# EXPORT CLEANED DATASET FOR POWER BI
+# ============================================
+
+query = """
+SELECT
+    orders.order_id,
+    orders.purchase_month,
+    orders.delivery_days,
+    customers.customer_state,
+    payments.payment_type,
+    payments.payment_value,
+    products.product_category_name
+
+FROM orders
+
+JOIN customers
+ON orders.customer_id = customers.customer_id
+
+JOIN payments
+ON orders.order_id = payments.order_id
+
+JOIN order_items
+ON orders.order_id = order_items.order_id
+
+JOIN products
+ON order_items.product_id = products.product_id
+"""
+
+dashboard_data = pd.read_sql_query(query, conn)
+
+dashboard_data.to_csv(
+    "data/dashboard_dataset.csv",
+    index=False
+)
+
+print("\nDashboard dataset exported successfully.")
+
+# ============================================
 # CLOSE CONNECTION
 # ============================================
 

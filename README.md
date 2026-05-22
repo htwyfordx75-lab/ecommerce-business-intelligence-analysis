@@ -1,6 +1,6 @@
 # E-Commerce Business Intelligence Analysis
 
-Business intelligence and sales analytics project using Python, SQL, SQLite, Pandas, and Matplotlib.
+End-to-end business intelligence and sales analytics project using Python, SQL, SQLite, Pandas, Matplotlib, and Power BI.
 
 ---
 
@@ -15,7 +15,7 @@ This project analyses a large Brazilian e-commerce dataset to uncover:
 - Payment method usage
 - Product category performance
 
-The project uses SQL joins, Python data analysis, and data visualisation techniques to generate business insights from relational datasets.
+The project combines Python-based data analysis, SQL joins, and interactive Power BI dashboarding to generate actionable business insights from relational datasets.
 
 ---
 
@@ -28,7 +28,7 @@ This analysis investigates:
 - Which states experience the longest delivery times?
 - Which payment methods are most commonly used?
 - How does revenue change over time?
-- Are revenue drops caused by business trends or incomplete data coverage?
+- Are revenue drops caused by genuine business trends or incomplete dataset coverage?
 
 ---
 
@@ -39,6 +39,7 @@ This analysis investigates:
 - SQLite
 - SQL
 - Matplotlib
+- Power BI
 - VS Code
 - Git & GitHub
 
@@ -76,7 +77,28 @@ Validated monthly revenue trends by analysing order volume patterns.
 
 ---
 
-# Example Visualisations
+# Interactive Power BI Dashboard
+
+An interactive Power BI dashboard was developed to explore:
+
+- Revenue trends
+- Regional sales performance
+- Delivery performance
+- Product category revenue
+- Payment method behaviour
+
+The dashboard includes:
+- KPI cards
+- Interactive slicers
+- Trend analysis
+- Geographic comparisons
+- Operational performance insights
+
+![Power BI Dashboard](screenshots/powerbi_dashboard.png)
+
+---
+
+# Example Python Visualisations
 
 ## Revenue by Payment Method
 
@@ -94,48 +116,3 @@ Validated monthly revenue trends by analysing order volume patterns.
 
 ![Top Revenue States](screenshots/top_revenue_states.png)
 
----
-
-# Skills Demonstrated
-
-- SQL joins
-- Relational database analysis
-- Data cleaning and transformation
-- Exploratory data analysis (EDA)
-- Business intelligence analysis
-- Data visualisation
-- Time-series analysis
-- Operational analytics
-- GitHub project structuring
-
----
-
-# Project Structure
-
-```plaintext
-ecommerce_bi_project/
-│
-├── data/
-├── screenshots/
-├── analysis.py
-├── ecommerce.db
-├── requirements.txt
-└── README.md
-```
-
----
-
-# How To Run
-
-1. Clone the repository
-2. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the analysis script:
-
-```bash
-python analysis.py
-```
